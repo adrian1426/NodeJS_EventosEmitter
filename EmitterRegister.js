@@ -1,11 +1,13 @@
-const Emitter = require('./Emitter');
-const emitter = new Emitter();
+const { EventEmitter } = require('events');
+const { SAVE_TYPE } = require('./events/eventsType');
 
-emitter.on('save', () => {
+const emitter = new EventEmitter();
+
+emitter.on(SAVE_TYPE, () => {
   console.log('Evento OnSave Activado 1');
 });
 
-emitter.on('save', () => {
+emitter.on(SAVE_TYPE, () => {
   console.log('Evento OnSave Activado 2');
 });
 

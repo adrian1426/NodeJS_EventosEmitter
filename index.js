@@ -1,3 +1,4 @@
 const Emitter = require('./EmitterRegister');
+const { SAVE_TYPE } = require('./events/eventsType');
 
-Emitter.emit('save');
+Emitter.emit(SAVE_TYPE);
